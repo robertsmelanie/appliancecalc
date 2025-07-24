@@ -7,6 +7,32 @@
 </head>
 <body>
     <h1>Appliance Calculator</h1>
+    <div class="calculator">
+        <h2 class="mb-4 text-center">💡 Energy Cost Calculator</h2>
+        <form id="energyForm">
+            <div class="mb-3">
+                <label for="watts" class="form-label">Device Wattage (W)</label>
+                <input type="number" class="form-control" id="watts" required>
+            </div>
+            <div class="mb-3">
+                <label for="hours" class="form-label">Hours Used Per Day</label>
+                <input type="number" class="form-control" id="hours" required>
+            </div>
+            <div class="mb-3">
+                <label for="rate" class="form-label">Electricity Rate ($ per kWh)</label>
+                <input type="number" class="form-control" id="rate" value="0.15" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Calculate</button>
+        </form>
+    
+        <div id="results" class="result-box d-none">
+            <h5>Estimated Cost</h5>
+            <p><strong>Daily:</strong> $<span id="daily"></span></p>
+            <p><strong>Monthly:</strong> $<span id="monthly"></span></p>
+            <p><strong>Yearly:</strong> $<span id="yearly"></span></p>
+        </div>
+    </div>
+    
 
 </body>
 </html>
